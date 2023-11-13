@@ -1,0 +1,320 @@
+*{
+    font-family: 'Roboto', sans-serif;
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+body{
+    background: linear-gradient(white,rgb(236, 236, 236));
+    background: url(img/patron.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+:root{
+    --color-txt : whitesmoke;
+    --color-blck: rgb(26, 26, 26);
+}
+
+span{
+    color:rgb(255, 68, 68);
+}
+
+/* navegacion */
+
+
+#navegacion{
+    background: linear-gradient(90deg,rgba(0, 0, 0, 0.7),rgba(255, 255, 255, 0.048));
+    width: 15%;
+    height: 100vh;
+    position: fixed;
+}
+nav{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100vh;
+}
+nav > li{
+    list-style-type: none;
+}
+nav > h1{
+    font-size: 2em;
+    color: var(--color-txt);
+    text-transform: uppercase;
+}
+nav > li a{
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 0.9em;
+    font-weight: bold;
+    color: var(--color-txt);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+}
+nav > li a:hover{
+    padding-bottom: 5px;
+    border-bottom: 1px solid red;
+}
+
+@media (max-width: 1000px){
+    #navegacion{
+        width:100%;
+        height:80px;
+        z-index:2;
+        top:0;
+        background: linear-gradient(180deg,rgba(0, 0, 0, 0.7),rgba(255, 255, 255, 0.048));
+    }
+    nav{
+        height:80px;
+        width: 100%;
+        position: absolute;
+        top: 0px;
+        flex-direction: row;
+    }
+    nav > h1{
+        font-size: 1.5em;
+    }
+    nav > li a{
+        font-size: 0.8em;
+        border-bottom: none;
+    }
+    nav > li a:hover{
+        border-bottom: none;
+
+    }
+}
+
+/* secciones */
+.sec{
+    height: 100vh;
+    width: 100%;
+}
+.one{
+    z-index: -1;
+    position: relative;
+    background-image: url(img/fondoCine.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: blur(5px);
+}
+
+#title{
+    font-size:3.5em;
+    font-weight: bold;
+    letter-spacing: 1px;
+    position: absolute;
+    color:var(--color-txt);
+    width:50%;
+    top: 30%;
+    left:20%;
+    -webkit-text-stroke: 1px black;
+}
+
+@media (max-width: 800px){
+    .one{
+        height:140vh
+    }
+}
+
+.two, .three, .four{
+    width:65%;
+    background: whitesmoke;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.two{
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+}
+
+#container{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 5px;
+}
+#container > div{
+    padding:20px
+}
+
+#container > div i{
+    margin-bottom:8px;
+    color: red;
+    border: 1px solid black;
+    vertical-align: middle;
+    padding: 5px;
+    border-radius: 10%;
+}
+#container > div h3{
+    padding-bottom:15px;
+    color: orangered;
+}
+#container > div p{
+    line-height: 120%;
+}
+
+#view{
+    display: flex;
+    margin: 25px;
+    align-items: center;
+    margin-top: 15%;
+}
+#view h2{
+    width: 50%;
+}
+#view img {
+    width:250px;
+}
+@media (max-width: 800px){
+    .two{
+        height: 150vh;
+        width: 100%;
+    }
+    #container{
+        flex-direction: column;
+        width: 300px;
+    }
+}
+
+/* seccion tres fondo negro */
+
+.three{
+    background-color:black;
+    width: 100%;
+    height: 150vh;
+}
+#proyects{
+    width: 80%;
+    margin: 0 auto;
+    margin-right: 0;
+    border-radius: none !important;
+}
+#proyects h3{
+    color: white;
+    font-weight: bold;
+    font-size: 2em;
+    letter-spacing: 2px;
+    padding: 30px 0;
+}
+#proyects div{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+
+}
+#proyects div img{
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 200px;
+    height: auto;
+}
+
+@media (max-width: 800px){
+    #proyects{
+        width: 100%;
+        margin: 0;
+        text-align: center;
+    }
+    #proyects div{
+        margin-left: 10px;
+        gap: 5px;
+        width: 100%;
+    }
+    #proyects div img{
+        width: 100px;
+    }
+    
+    .three{
+        background-color:black;
+        width: 100%;
+        border-radius: none !important;
+        height: 110vh;
+    }
+}
+/* seccion cuatro precios */
+.four{
+    width: 80%;
+    text-align: center;
+}
+
+h4{
+    font-size: 2em;
+    border-bottom: double 3px gray;
+    width: fit-content;
+    margin: 0 auto;
+    padding-top: 50px;
+    margin-top: 50px;
+}
+#price{
+    display: flex;
+    gap: 10px;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.cart{
+    height: 300px;
+    padding: 10px;
+    border-radius: 20px;
+    border: 1px solid black;
+    text-align: center;
+    transition:all .5s;
+}
+.cart:hover{
+    border: red 1px solid;
+}
+.cart h5{
+    font-size:1.3em;
+    letter-spacing:2px;
+    color:red;
+    text-transform: uppercase;
+}
+.cart i{
+    transform: scale(1.5);
+    padding: 10px;
+    color: orangered;
+}
+.cart ul{
+    margin: 5px 0;
+}
+.cart ul li{
+    list-style-type: none;
+    padding: 3px 10px;
+    margin: 3px 0;
+}
+.cart p{
+    font-weight: bold;
+    margin-top: 2px;
+}
+.cart button{
+    padding:5px 14px;
+    border-radius: 8px;
+    background-color: red;
+    color: whitesmoke;
+    text-transform: uppercase;
+    margin: 5px 0;
+    font-weight: bold;
+    border: none;
+    cursor:pointer;
+}
+.cart button:hover{
+    transform: scale(1.05);
+}
+
+@media (max-width: 800px){
+    .four{
+        height: fit-content;
+    }
+    #price{
+        flex-direction: column;
+        gap: 20px
+    }
+}
